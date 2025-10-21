@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Engineering Unit Converter (BS 350:2004)</title>
+<style>
+  :root{--bg:#1e3a8a;--card:#2563eb;--muted:#cbd5e1;--accent:#22d3ee;--good:#22c55e}
+  *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial; background:linear-gradient(135deg,#3b82f6 0%,#1e40af 50%,#1e3a8a 100%); color:#e5e7eb; min-height:100vh}
+  header{padding:24px 16px;text-align:center;border-bottom:2px solid #60a5fa; position:sticky;top:0;background:rgba(30,58,138,0.95);backdrop-filter: blur(8px);box-shadow:0 4px 12px rgba(0,0,0,0.1);z-index:1000}
+  h1{margin:0;font-size:clamp(20px,2.6vw,30px);letter-spacing:.3px;color:#fff}
+  main{max-width:1200px;margin:24px auto;padding:0 16px 100px}
+  .grid{display:grid;grid-template-columns: 1.2fr 1fr; gap:20px}
+  @media (max-width: 980px){.grid{grid-template-columns:1fr}}
+  .panel{background:rgba(255,255,255,0.95);border:2px solid #60a5fa;border-radius:16px; padding:16px 16px 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);color:#1e293b}
+  .row{display:grid;grid-template-columns:1fr 1fr; gap:12px}
+  label{font-size:12px;color:#475569;font-weight:600}
+  select, input{width:100%; padding:10px 12px;border-radius:10px;border:2px solid #3b82f6;background:#fff;color:#1e293b;font-weight:500}
+  select:focus, input:focus{outline:none;border-color:#22d3ee;box-shadow:0 0 0 3px rgba(34,211,238,0.1)}
+  .muted{color:#64748b;font-size:12px}
+  .result-card{display:flex;align-items:center;justify-content:space-between;padding:18px;border-radius:12px;background:linear-gradient(135deg,#3b82f6,#2563eb);border:2px solid #60a5fa;margin-top:10px;color:#fff}
+  .big{font-size:clamp(18px,3.3vw,28px);font-weight:700;color:#fff}
+  .badge{font-size:12px;padding:4px 8px;border:1px solid #60a5fa;border-radius:999px;color:#e0f2fe;background:rgba(255,255,255,0.1)}
+  .units-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
+  .units-table th,.units-table td{border-bottom:1px solid #cbd5e1;padding:8px 6px;text-align:left}
+  .units-table th{color:#475569;font-weight:600;background:#f1f5f9}
+  .references{margin-top:12px;font-size:11px;color:#64748b;line-height:1.6;background:#f8fafc;padding:8px;border-radius:6px}
+  .footer{margin-top:20px;font-size:12px;color:#64748b}
+  .signature-photo{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid #22d3ee;box-shadow:0 4px 12px rgba(34,211,238,0.3)}
+  .social-icon{width:40px;height:40px;border-radius:8px;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+  .social-icon:hover{transform:scale(1.1);box-shadow:0 4px 16px rgba(34,211,238,0.5)}
+</style>
+</head>
+<body>
+  <header>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 16px;">
+      <!-- Signature and Title Row -->
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+        
+        <!-- Left: Signature -->
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <div style="flex-shrink: 0;">
+            <img src="me.png" alt="Ahmed Hussein" class="signature-photo">
+          </div>
+                    <div style="min-width: 250px; text-align: left;">
+            <h3 style="margin: 0 0 6px 0; color: #fff; font-size: 18px; font-weight: 600;">Ahmed Hussein</h3>
+            <p style="margin: 0 0 4px 0; color: #e0f2fe; font-size: 12px; line-height: 1.4;">
+              <strong>Senior Instrumentation and Maintenance Planning Engineer, GASCO</strong>
+            </p>
+            <p style="margin: 0 0 4px 0; color: #cbd5e1; font-size: 11px;">
+              <strong>Dept:</strong> Maintenance Engineering - Gas Network Operations
+            </p>
+            <p style="margin: 0 0 8px 0; color: #cbd5e1; font-size: 11px;">
+              <strong>Mobile:</strong> <a href="tel:+201068798889" style="color: #22d3ee; text-decoration: none; font-weight: 500;">+201068798889</a>
+            </p>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <a href="https://www.linkedin.com/in/ahmedhussein90/" target="_blank" rel="noopener noreferrer" style="display: block; text-decoration: none;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" title="LinkedIn Profile" class="social-icon">
+              </a>
+              <a href="https://www.credly.com/badges/77121880-e979-459a-b5d4-7c8ee4590614/public_url" target="_blank" rel="noopener noreferrer" style="display: block; text-decoration: none;">
+                <img src="cmrp.png" alt="CMRP Certified" title="CMRP Certification" class="social-icon">
+              </a>
+              <a href="https://badgr.com/public/assertions/ylnHIYOdQ_62QFhQlnyI6A?identity__email=ahmed.h.abdelaziz%40xed.aucegypt.edu" target="_blank" rel="noopener noreferrer" style="display: block; text-decoration: none;">
+                <img src="f3.jpg" alt="AUC Certificate" title="AUC Certificate of Achievement" class="social-icon">
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right: Title -->
+                <div style="flex: 1; min-width: 300px; text-align: left; margin-left: 90px;">
+          <h1 style="margin: 0 0 8px 0;">Engineering Unit Converter<br />BS 350:2004</h1>
+
+          <div class="muted" style="color:#e0f2fe">Conversion factors verified against BS 350:2004 standard. Factors in <strong>boldface</strong> are exact.</div>
+        </div>
+        
+      </div>
+    </div>
+  </header>
+
+
+
+  </header>
+  <main class="grid" style="padding-bottom: 40px;">
+
+    <section class="panel">
+      <div class="row" style="margin-bottom:10px">
+        <div>
+          <label>Category</label>
+          <select id="category"></select>
+        </div>
+        <div>
+          <label>Value</label>
+          <input id="value" type="number" step="any" placeholder="e.g., 12.5" />
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label>From</label>
+          <select id="from"></select>
+        </div>
+        <div>
+          <label>To</label>
+          <select id="to"></select>
+        </div>
+      </div>
+      <div class="result-card">
+        <div>
+          <div class="muted" style="color:#e0f2fe">Result</div>
+          <div id="result" class="big">—</div>
+        </div>
+        <div class="badge" id="siBadge">SI base: —</div>
+      </div>
+    </section>
+
+    <aside class="panel">
+      <div class="muted">Conversion factors to SI base units. Temperatures use affine transforms.</div>
+      <table class="units-table" id="table">
+        <thead><tr><th>Unit</th><th>Multiply</th><th>Std</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <div class="references" id="references"></div>
+      <div class="footer">Source: BS 350:2004 "Conversion factors for units" — British Standards Institution</div>
+    </aside>
+  </main>
+
+<script>
+const temp = {
+  toK: {'K': v => v, '°C': v => v + 273.15, '°F': v => (v + 459.67)/1.8, 'R': v => v/1.8},
+  fromK: {'K': v => v, '°C': v => v - 273.15, '°F': v => v*1.8 - 459.67, 'R': v => v*1.8}
+};
+const tempDiff = {
+  toK: {'K': v => v, 'Δ°C': v => v*1, 'Δ°F': v => v*(5/9), 'R': v => v*(5/9)},
+  fromK: {'K': v => v, 'Δ°C': v => v, 'Δ°F': v => v*(9/5), 'R': v => v*(9/5)}
+}
+
+const data = {
+  'Length': {
+    base: 'm',
+    refs: {'1': 'BS 350:2004 Table 3', '2': 'BS 350:2004 Section 3'},
+    units: {
+      'centimetre': {val: 0.01, std: '2', exact: true},
+      'millimetre': {val: 0.001, std: '2', exact: true},
+      'micrometer': {val: 1e-6, std: '2', exact: true},
+      'kilometre': {val: 1e3, std: '2', exact: true},
+      'inch': {val: 0.0254, std: '1', exact: true},
+      'foot': {val: 0.3048, std: '1', exact: true},
+      'yard': {val: 0.9144, std: '1', exact: true},
+      'mile': {val: 1609.344, std: '1', exact: true}
+    }
+  },
+  'Area': {
+    base: 'm²',
+    refs: {'1': 'BS 350:2004 Table 4', '2': 'BS 350:2004 Section 4'},
+    units: {
+      'square millimetre': {val: 1e-6, std: '2', exact: true},
+      'square centimetre': {val: 0.0001, std: '2', exact: true},
+      'square kilometre': {val: 1e6, std: '2', exact: true},
+      'square inch': {val: 6.4516e-4, std: '1', exact: true},
+      'square foot': {val: 9.290304e-2, std: '1', exact: true},
+      'square yard': {val: 0.83612736, std: '1', exact: true},
+      'square mile': {val: 2.589988e6, std: '1', exact: false}
+    }
+  },
+  'Volume': {
+    base: 'm³',
+    refs: {'1': 'BS 350:2004 Table 6', '2': 'BS 350:2004 Section 5', '3': 'API MPMS Ch12.2.1'},
+    units: {
+      'cubic centimetre': {val: 1e-6, std: '2', exact: true},
+      'cubic millimetre': {val: 1e-9, std: '2', exact: true},
+      'kilo cubic metre': {val: 1000, std: '2', exact: true},
+      'mega cubic metre': {val: 1e6, std: '2', exact: true},
+      'litre': {val: 0.001, std: '1', exact: true},
+      'cubic inch': {val: 16.387064e-6, std: '1', exact: true},
+      'cubic foot': {val: 0.028316846592, std: '1', exact: true},
+      'kilo cubic foot': {val: 28.316846592, std: '2', exact: false},
+      'thousand cubic foot': {val: 28.316846592, std: '2', exact: false},
+      'million cubic foot': {val: 28316.846592, std: '2', exact: false},
+      'barrel (for petroleum, 42 gallons (U.S.))': {val: 0.158987294928, std: '2,3', exact: false},
+      'gallon (U.K.)': {val: 4.54609e-3, std: '2', exact: false},
+      'gallon (U.S)': {val: 3.785411784e-3, std: '2,3', exact: true}
+    }
+  },
+  'Mass': {
+    base: 'kg',
+    refs: {'1': 'BS 350:2004 Table 15', '2': 'BS 350:2004 Section 15'},
+    units: {
+      'gram': {val: 1e-3, std: '2', exact: true},
+      'milligram': {val: 1e-6, std: '2', exact: true},
+      'microgram': {val: 1e-9, std: '2', exact: true},
+      'pound (avoirdupois)': {val: 0.45359237, std: '1', exact: true},
+      'thousand pound (avoirdupois)': {val: 453.59237, std: '2', exact: true},
+      'million pound (avoirdupois)': {val: 4.5359237e5, std: '2', exact: true},
+      'tonne (metric)': {val: 1000, std: '2', exact: true},
+      'ton (short)': {val: 907.18474, std: '2', exact: true},
+      'ton (long)': {val: 1016.0469088, std: '2', exact: true}
+    }
+  },
+  'Time': {
+    base: 's',
+    refs: {'1': 'BS 350:2004 Section 10'},
+    units: {
+      'millisecond': {val: 0.001, std: '1', exact: true},
+      'microsecond': {val: 1e-6, std: '1', exact: true},
+      'nanosecond': {val: 1e-9, std: '1', exact: true},
+      'minute': {val: 60, std: '1', exact: true},
+      'hour': {val: 3600, std: '1', exact: true},
+      'day': {val: 86400, std: '1', exact: true}
+    }
+  },
+  'Pressure': {
+    base: 'Pa',
+    refs: {'1': 'BS 350:2004 Section 33', '2': 'BS 350:2004 Table 32', '3': 'BS 350:2004 Table 33', '4': 'BS 350:2004 Table 34'},
+    units: {
+      'kilo pascal': {val: 1000, std: '1', exact: true},
+      'mega pascal': {val: 1e6, std: '1', exact: true},
+      'giga pascal': {val: 1e9, std: '1', exact: true},
+      'kilogram-force per square metre': {val: 9.80665, std: '4', exact: true},
+      'kilogram-force per square centimetre': {val: 98066.5, std: '2', exact: true},
+      'pound-force per square foot': {val: 47.88025898, std: '3', exact: true},
+      'pound-force per square inch': {val: 6894.757293168361, std: '1', exact: true},
+      'psi': {val: 6894.757293168361, std: '1', exact: true},
+      'bar': {val: 1e5, std: '3', exact: true},
+      'millibar': {val: 100, std: '3', exact: true},
+      'millimetre of mercury, conventional': {val: 133.3224, std: '4', exact: false},
+      'millimetre of water, conventional': {val: 9.80665, std: '1', exact: true},
+      'millimetre of water @ 60°F': {val: 248.84/25.4, std: '1', exact: false},
+      'inch of mercury, conventional': {val: 3386.389, std: '4', exact: false},
+      'inch of mercury @ 32°F': {val: 3386.38, std: '1', exact: false},
+      'inch of mercury @ 60°F': {val: 3376.85, std: '1', exact: false},
+      'inch of water, conventional': {val: 249.08891, std: '4', exact: false},
+      'inch of water @ 39.2°F': {val: 249.082, std: '1', exact: false},
+      'inch of water @ 60°F': {val: 248.84, std: '1', exact: false},
+      'foot of water, conventional': {val: 2989.06692, std: '4', exact: false},
+      'foot of water @ 39.2°F': {val: 2988.98, std: '1', exact: false},
+      'torr': {val: 101325/760, std: '1', exact: true},
+      'atmosphere, standard': {val: 101325, std: '3', exact: true}
+    }
+  },
+  'Volume Flow Rate': {
+    base: 'm³/s',
+    refs: {'1': 'BS 350:2004 Section 5', '2': 'BS 350:2004 Section 10', '3': 'BS 350:2004 Section 5 & BS 350:2004 Section 10'},
+    units: {
+      'cubic metre per hour': {val: 1/3600, std: '2', exact: true},
+      'cubic metre per day': {val: 1/86400, std: '2', exact: true},
+      'kilo cubic metre per second': {val: 1000, std: '1', exact: true},
+      'kilo cubic metre per hour': {val: 1/3.6, std: '3', exact: false},
+      'kilo cubic metre per day': {val: 1/86.4, std: '3', exact: false},
+      'mega cubic metre per hour': {val: 1e6/3600, std: '3', exact: true},
+      'mega cubic metre per day': {val: 1e6/86400, std: '3', exact: true},
+      'cubic feet per hour': {val: 0.028316846592/3600, std: '3', exact: true},
+      'cubic feet per day': {val: 0.028316846592/86400, std: '3', exact: true},
+      'kilo cubic feet per hour': {val: 28.316846592/3600, std: '3', exact: false},
+      'kilo cubic feet per day': {val: 28.316846592/86400, std: '3', exact: false},
+      'thousand cubic feet per hour': {val: 28.316846592/3600, std: '3', exact: false},
+      'thousand cubic feet per day': {val: 28.316846592/86400, std: '3', exact: false},
+      'million cubic feet per hour': {val: 28316.846592/3600, std: '3', exact: false},
+      'million cubic feet per day': {val: 28316.846592/86400, std: '3', exact: false},
+      'barrels per second': {val: 0.158987294928, std: '1', exact: false},
+      'barrels per minute': {val: 0.158987294928/60, std: '3', exact: false},
+      'barrels per hour': {val: 0.158987294928/3600, std: '3', exact: false},
+      'barrels per day': {val: 0.158987294928/86400, std: '3', exact: false}
+    }
+  },
+  'Mass Flow Rate': {
+    base: 'kg/s',
+    refs: {'1': 'BS 350:2004 Section 15', '2': 'BS 350:2004 Section 10', '3': 'BS 350:2004 Section 15 & Section 10'},
+    units: {
+      'pound (avoirdupois) per hour': {val: 0.45359237/3600, std: '3', exact: true},
+      'pound per second': {val: 0.45359237, std: '1', exact: true},
+      'kilogram per hour': {val: 1/3600, std: '2', exact: true},
+      'tonne per second': {val: 1000, std: '1', exact: true},
+      'tonne per hour': {val: 1/3.6, std: '3', exact: false},
+      'ton (short) per second': {val: 907.18474, std: '1', exact: true},
+      'ton (short) per hour': {val: 907.18474/3600, std: '3', exact: true},
+      'kilogram per day': {val: 1/86400, std: '2', exact: true},
+      'tonne per day': {val: 1/86.4, std: '3', exact: false},
+      'ton (short) per day': {val: 907.18474/86400, std: '3', exact: true},
+      'kilo pound per second': {val: 453.59237, std: '3', exact: true},
+      'kilo pound per hour': {val: 453.59237/3600, std: '3', exact: true},
+      'kilo pound per day': {val: 453.59237/86400, std: '3', exact: true},
+      'ton (long) per second': {val: 1016.0469088, std: '1', exact: true},
+      'ton (long) per hour': {val: 1016.0469088/3600, std: '1', exact: true},
+      'ton (long) per day': {val: 1016.0469088/86400, std: '1', exact: true}
+    }
+  },
+  'Energy Flow Rate': {
+    base: 'J/s',
+    refs: {'1': 'BS 350:2004 Section 37 & BS 350:2004 Section 10', '2': 'BS 350:2004 Section 37', '3': 'BS 350:2004 Table 38 & BS 350:2004 Section 10'},
+    units: {
+      'kilojoules per second': {val: 1000, std: '2', exact: true},
+      'megajoules per second': {val: 1e6, std: '2', exact: true},
+      'gigajoules per second': {val: 1e9, std: '2', exact: true},
+      'megajoules per hour': {val: 1e6/3600, std: '1', exact: true},
+      'gigajoules per hour': {val: 1e9/3600, std: '1', exact: true},
+      'terajoule per hour': {val: 1e12/3600, std: '1', exact: true},
+      'megajoule per day': {val: 1e6/86400, std: '1', exact: true},
+      'gigajoule per day': {val: 1e9/86400, std: '1', exact: true},
+      'terajoule per day': {val: 1e12/86400, std: '1', exact: true},
+      'British thermal units per second': {val: 1.05505585262e3, std: '3', exact: false},
+      'British thermal units per hour': {val: 0.293071, std: '3', exact: false},
+      'British thermal units per day': {val: 1.221129e-2, std: '3', exact: false},
+      'kilo British thermal units per hour': {val: 293.071, std: '3', exact: false},
+      'kilo British thermal units per day': {val: 12.221129, std: '3', exact: false},
+      'million British thermal units per hour': {val: 2.93071e5, std: '3', exact: false},
+      'million British thermal units per day': {val: 1.221129e4, std: '3', exact: false},
+      'million British thermal units per second': {val: 1.05505585262e9, std: '3', exact: false}
+    }
+  },
+  'Kinematic Viscosity': {
+    base: 'm²/s',
+    refs: {'1': 'BS 350:2004 Section 36'},
+    units: {
+      'millimetre squared per second': {val: 1e-6, std: '1', exact: true},
+      'centistokes': {val: 1e-6, std: '1', exact: true}
+    }
+  },
+  'Dynamic Viscosity': {
+    base: 'Pa·s',
+    refs: {'1': 'BS 350:2004 Table 35', '2': 'BS 350:2004 Section 35'},
+    units: {
+      'centipoise': {val: 0.001, std: '1', exact: true},
+      'kilogram force second per square metre': {val: 9.80665, std: '1', exact: false},
+      'pound-force hour per square foot': {val: 1.72369e5, std: '2', exact: false},
+      'pound-force second per square foot': {val: 47.8803, std: '2', exact: false},
+      'poundal second per square foot': {val: 1.48816394356955, std: '', exact: false},
+      'pound per foot second': {val: 1.48816394356955, std: '', exact: false},
+      'Poise': {val: 0.1, std: '2', exact: true},
+      'reciprocal pascal second': {val: 10, std: '', exact: true}
+    }
+  },
+  'Density': {
+    base: 'kg/m³',
+    refs: {'1': 'BS 350:2004 Table 22', '2': 'BS 350:2004 Section 15', '3': 'BS 350:2004 Table 17', '4': 'BS 350:2004 Section 3'},
+    units: {
+      'gram per cubic centimetre': {val: 1000, std: '1', exact: true},
+      'milligram per cubic metre': {val: 1e-6, std: '2', exact: true},
+      'tonne per cubic metre': {val: 1000, std: '3', exact: true},
+      'pound per cubic foot': {val: 16.0184633739601, std: '2,4', exact: false},
+      'pound per cubic inch': {val: 2.76799047102031e4, std: '2,4', exact: false}
+    }
+  },
+  'Energy': {
+    base: 'J',
+    refs: {'1': 'BS 350:2004 Table 37', '2': 'BS 350:2004 Table 38', '3': 'BS 350:2004 Section 37'},
+    units: {
+      'kilojoules': {val: 1000, std: '3', exact: true},
+      'megajoules': {val: 1e6, std: '3', exact: true},
+      'gigajoules': {val: 1e9, std: '3', exact: true},
+      'terajoules': {val: 1e12, std: '3', exact: true},
+      'watt hour': {val: 3600, std: '1', exact: true},
+      'kilowatt hour': {val: 3.6e6, std: '3', exact: false},
+      'watt second': {val: 1, std: '1', exact: true},
+      'British thermal unit': {val: 1.055056e3, std: '2', exact: false},
+      'kilo British thermal unit': {val: 1.055056e6, std: '3', exact: false},
+      'million British thermal unit': {val: 1.055056e9, std: '3', exact: false},
+      'decatherm': {val: 1.055056e9, std: '3', exact: false},
+      'calorie': {val: 4.1868, std: '2', exact: true},
+      'kilocalorie': {val: 4186.8, std: '3', exact: false},
+      'million kilocalorie': {val: 4.1868e9, std: '3', exact: false}
+    }
+  },
+  'Temperature': {
+    base: 'K',
+    kind: 'affine',
+    refs: {'1': 'BS 350:2004 Table 40'},
+    units: ['K','°C','°F','R']
+  },
+  'Temperature Difference': {
+    base: 'K',
+    kind: 'affineDiff',
+    refs: {'1': 'BS 350:2004 Table 40'},
+    units: ['K','Δ°C','Δ°F','R']
+  }
+};
+
+const catEl = document.getElementById('category');
+const fromEl = document.getElementById('from');
+const toEl = document.getElementById('to');
+const valEl = document.getElementById('value');
+const resEl = document.getElementById('result');
+const tableBody = document.querySelector('#table tbody');
+const siBadge = document.getElementById('siBadge');
+const refsDiv = document.getElementById('references');
+
+function full(x){
+  if (!isFinite(x)) return '—';
+  let s = x.toString();
+  if (/[eE]/.test(s)) s = x.toFixed(20);
+  if (s.includes('.')) s = s.replace(/0+$/,'').replace(/\.$/,'');
+  return s;
+}
+
+function loadCategory(name){
+  const cfg = data[name];
+  siBadge.textContent = `SI base: ${cfg.base}`;
+  fromEl.innerHTML = '';
+  toEl.innerHTML = '';
+  tableBody.innerHTML='';
+  
+  if (cfg.refs) {
+    let refText = '';
+    Object.keys(cfg.refs).sort().forEach(key => {
+      refText += `${key}: ${cfg.refs[key]}<br>`;
+    });
+    refsDiv.innerHTML = refText;
+  } else {
+    refsDiv.innerHTML = '';
+  }
+
+  if (cfg.kind === 'affine' || cfg.kind === 'affineDiff'){
+    const list = cfg.units;
+    for (const u of list){
+      fromEl.add(new Option(u, u));
+      toEl.add(new Option(u, u));
+      const row = document.createElement('tr');
+      const formula = u==='K'||u==='Δ°C'?'1': (u==='°C'?'K = °C + 273.15': (u==='°F'?'K = (°F + 459.67)/1.8':'K = R / 1.8'));
+      const stdRef = '1';
+      row.innerHTML = `<td>${u}</td><td>${formula}</td><td>${stdRef}</td>`;
+      tableBody.appendChild(row);
+    }
+  } else {
+    const units = cfg.units;
+    Object.keys(units).forEach(u => {
+      fromEl.add(new Option(u, u));
+      toEl.add(new Option(u, u));
+      const unitData = units[u];
+      const valDisplay = unitData.exact ? `<strong>${full(unitData.val)}</strong>` : full(unitData.val);
+      const row = document.createElement('tr');
+      row.innerHTML = `<td>${u}</td><td>${valDisplay}</td><td>${unitData.std}</td>`;
+      tableBody.appendChild(row);
+    });
+  }
+  compute();
+}
+
+function compute(){
+  const cat = catEl.value; if(!cat) return;
+  const cfg = data[cat];
+  const v = parseFloat(valEl.value);
+  const from = fromEl.value; const to = toEl.value;
+  if (isNaN(v)) { resEl.textContent = '—'; return; }
+  let out;
+  if (cfg.kind === 'affine'){
+    const K = temp.toK[from](v);
+    out = temp.fromK[to](K);
+  } else if (cfg.kind === 'affineDiff'){
+    const K = tempDiff.toK[from](v);
+    out = tempDiff.fromK[to](K);
+  } else {
+    const toBase = cfg.units[from].val;
+    const fromBase = 1 / cfg.units[to].val;
+    out = v * toBase * fromBase;
+  }
+  resEl.textContent = `${full(out)} ${to}`;
+}
+
+for (const name of Object.keys(data)){
+  catEl.add(new Option(name, name));
+}
+catEl.addEventListener('change', ()=>loadCategory(catEl.value));
+fromEl.addEventListener('change', compute);
+toEl.addEventListener('change', compute);
+valEl.addEventListener('input', compute);
+
+catEl.value = 'Length';
+loadCategory(catEl.value);
+valEl.value = 1;
+compute();
+</script>
+
+ 
+</body>
+</html>
