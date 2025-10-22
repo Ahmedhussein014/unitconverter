@@ -134,6 +134,7 @@ const data = {
     base: 'm',
     refs: {'1': 'BS 350:2004 Table 3', '2': 'BS 350:2004 Section 3'},
     units: {
+      'metre': {val: 1, std: '2', exact: true},
       'centimetre': {val: 0.01, std: '2', exact: true},
       'millimetre': {val: 0.001, std: '2', exact: true},
       'micrometer': {val: 1e-6, std: '2', exact: true},
@@ -148,6 +149,7 @@ const data = {
     base: 'm²',
     refs: {'1': 'BS 350:2004 Table 4', '2': 'BS 350:2004 Section 4'},
     units: {
+      'square metre': {val: 1, std: '2', exact: true},
       'square millimetre': {val: 1e-6, std: '2', exact: true},
       'square centimetre': {val: 0.0001, std: '2', exact: true},
       'square kilometre': {val: 1e6, std: '2', exact: true},
@@ -161,6 +163,7 @@ const data = {
     base: 'm³',
     refs: {'1': 'BS 350:2004 Table 6', '2': 'BS 350:2004 Section 5', '3': 'API MPMS Ch12.2.1'},
     units: {
+      'cubic metre': {val: 1, std: '2', exact: true},
       'cubic centimetre': {val: 1e-6, std: '2', exact: true},
       'cubic millimetre': {val: 1e-9, std: '2', exact: true},
       'kilo cubic metre': {val: 1000, std: '2', exact: true},
@@ -180,6 +183,7 @@ const data = {
     base: 'kg',
     refs: {'1': 'BS 350:2004 Table 15', '2': 'BS 350:2004 Section 15'},
     units: {
+      'kilogram': {val: 1, std: '2', exact: true},
       'gram': {val: 1e-3, std: '2', exact: true},
       'milligram': {val: 1e-6, std: '2', exact: true},
       'microgram': {val: 1e-9, std: '2', exact: true},
@@ -195,6 +199,7 @@ const data = {
     base: 's',
     refs: {'1': 'BS 350:2004 Section 10'},
     units: {
+      'second': {val: 1, std: '1', exact: true},
       'millisecond': {val: 0.001, std: '1', exact: true},
       'microsecond': {val: 1e-6, std: '1', exact: true},
       'nanosecond': {val: 1e-9, std: '1', exact: true},
@@ -207,6 +212,7 @@ const data = {
     base: 'Pa',
     refs: {'1': 'BS 350:2004 Section 33', '2': 'BS 350:2004 Table 32', '3': 'BS 350:2004 Table 33', '4': 'BS 350:2004 Table 34'},
     units: {
+      'pascal': {val: 1, std: '1', exact: true},
       'kilo pascal': {val: 1000, std: '1', exact: true},
       'mega pascal': {val: 1e6, std: '1', exact: true},
       'giga pascal': {val: 1e9, std: '1', exact: true},
@@ -236,6 +242,7 @@ const data = {
     base: 'm³/s',
     refs: {'1': 'BS 350:2004 Section 5', '2': 'BS 350:2004 Section 10', '3': 'BS 350:2004 Section 5 & BS 350:2004 Section 10'},
     units: {
+      'cubic metre per second': {val: 1, std: '1', exact: true},
       'cubic metre per hour': {val: 1/3600, std: '2', exact: true, frac: '1/3600'},
       'cubic metre per day': {val: 1/86400, std: '2', exact: true, frac: '1/86400'},
       'kilo cubic metre per second': {val: 1000, std: '1', exact: true},
@@ -261,6 +268,7 @@ const data = {
     base: 'kg/s',
     refs: {'1': 'BS 350:2004 Section 15', '2': 'BS 350:2004 Section 10', '3': 'BS 350:2004 Section 15 & Section 10'},
     units: {
+      'kilogram per second': {val: 1, std: '1', exact: true},
       'pound (avoirdupois) per hour': {val: 0.45359237/3600, std: '3', exact: true, frac: '(0.45359237/3600)'},
       'pound per second': {val: 0.45359237, std: '1', exact: true},
       'kilogram per hour': {val: 1/3600, std: '2', exact: true, frac: '(1.0/3600)'},
@@ -283,6 +291,7 @@ const data = {
     base: 'J/s',
     refs: {'1': 'BS 350:2004 Section 37 & BS 350:2004 Section 10', '2': 'BS 350:2004 Section 37', '3': 'BS 350:2004 Table 38 & BS 350:2004 Section 10'},
     units: {
+      'joules per second': {val: 1, std: '2', exact: true},
       'kilojoules per second': {val: 1000, std: '2', exact: true},
       'megajoules per second': {val: 1e6, std: '2', exact: true},
       'gigajoules per second': {val: 1e9, std: '2', exact: true},
@@ -306,6 +315,7 @@ const data = {
     base: 'm²/s',
     refs: {'1': 'BS 350:2004 Section 36'},
     units: {
+      'metre squared per second': {val: 1, std: '1', exact: true},
       'millimetre squared per second': {val: 1e-6, std: '1', exact: true},
       'centistokes': {val: 1e-6, std: '1', exact: true}
     }
@@ -314,6 +324,7 @@ const data = {
     base: 'Pa·s',
     refs: {'1': 'BS 350:2004 Table 35', '2': 'BS 350:2004 Section 35'},
     units: {
+      'pascal second': {val: 1, std: '2', exact: true},
       'centipoise': {val: 0.001, std: '1', exact: true},
       'kilogram force second per square metre': {val: 9.80665, std: '1', exact: true},
       'pound-force hour per square foot': {val: 1.72369e5, std: '2', exact: false},
@@ -328,6 +339,7 @@ const data = {
     base: 'kg/m³',
     refs: {'1': 'BS 350:2004 Table 22', '2': 'BS 350:2004 Section 15', '3': 'BS 350:2004 Table 17', '4': 'BS 350:2004 Section 3'},
     units: {
+      'kilogram per cubic metre': {val: 1, std: '2', exact: true},
       'gram per cubic centimetre': {val: 1000, std: '1', exact: true},
       'milligram per cubic metre': {val: 1e-6, std: '2', exact: true},
       'tonne per cubic metre': {val: 1000, std: '3', exact: true},
@@ -339,6 +351,7 @@ const data = {
     base: 'J',
     refs: {'1': 'BS 350:2004 Table 37', '2': 'BS 350:2004 Table 38', '3': 'BS 350:2004 Section 37'},
     units: {
+      'joules': {val: 1, std: '3', exact: true},
       'kilojoules': {val: 1000, std: '3', exact: true},
       'megajoules': {val: 1e6, std: '3', exact: true},
       'gigajoules': {val: 1e9, std: '3', exact: true},
@@ -368,6 +381,7 @@ const data = {
     units: ['K','Δ°C','Δ°F','R']
   }
 };
+
 
 const catEl = document.getElementById('category');
 const fromEl = document.getElementById('from');
@@ -478,4 +492,3 @@ compute();
 
 </body>
 </html>
-
