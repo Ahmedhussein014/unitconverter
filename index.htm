@@ -212,9 +212,9 @@ const data = {
       'giga pascal': {val: 1e9, std: '1', exact: true},
       'kilogram-force per square metre': {val: 9.80665, std: '4', exact: true},
       'kilogram-force per square centimetre': {val: 98066.5, std: '2', exact: true},
-      'pound-force per square foot': {val: 47.88025898, std: '3', exact: true},
-      'pound-force per square inch': {val: 6894.757293168361, std: '1', exact: true},
-      'psi': {val: 6894.757293168361, std: '1', exact: true},
+      'pound-force per square foot': {val: 47.88025898, std: '3', exact: false},
+      'pound-force per square inch': {val: 6894.757293168361, std: '1', exact: false},
+      'psi': {val: 6894.757293168361, std: '1', exact: false},
       'bar': {val: 1e5, std: '3', exact: true},
       'millibar': {val: 100, std: '3', exact: true},
       'millimetre of mercury, conventional': {val: 133.3224, std: '4', exact: false},
@@ -223,10 +223,10 @@ const data = {
       'inch of mercury, conventional': {val: 3386.389, std: '4', exact: false},
       'inch of mercury @ 32°F': {val: 3386.38, std: '1', exact: false},
       'inch of mercury @ 60°F': {val: 3376.85, std: '1', exact: false},
-      'inch of water, conventional': {val: 249.08891, std: '4', exact: false},
+      'inch of water, conventional': {val: 249.08891, std: '4', exact: true},
       'inch of water @ 39.2°F': {val: 249.082, std: '1', exact: false},
-      'inch of water @ 60°F': {val: 248.84, std: '1', exact: false},
-      'foot of water, conventional': {val: 2989.06692, std: '4', exact: false},
+      'inch of water @ 60°F': {val: 248.84, std: '1', exact: true},
+      'foot of water, conventional': {val: 2989.06692, std: '4', exact: true},
       'foot of water @ 39.2°F': {val: 2988.98, std: '1', exact: false},
       'torr': {val: 101325/760, std: '1', exact: true, frac: '101325/760'},
       'atmosphere, standard': {val: 101325, std: '3', exact: true}
@@ -478,3 +478,4 @@ compute();
 
 </body>
 </html>
+
