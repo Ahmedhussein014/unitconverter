@@ -47,12 +47,15 @@
             <p style="margin: 0 0 4px 0; color: #e0f2fe; font-size: 16px; line-height: 1.4;">
               <strong>Senior Instrumentation and Maintenance Planning Engineer, GASCO</strong>
             </p>
-            <p style="margin: 0 0 4px 0; color: #cbd5e1; font-size: 14px;">
-              <strong>Dept:</strong> Maintenance Engineering - Gas Network Operations
+
+                  <p style="margin: 0 0 8px 0; color: #cbd5e1; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+              <strong>Mobile:</strong> 
+              <a href="tel:+201068798889" style="color: #22d3ee; text-decoration: none; font-weight: 500;">+201068798889</a>
+              <a href="https://wa.me/201068798889" target="_blank" rel="noopener noreferrer" style="display: inline-block; text-decoration: none;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" title="Chat on WhatsApp" style="width: 24px; height: 24px; vertical-align: middle;">
+              </a>
             </p>
-            <p style="margin: 0 0 8px 0; color: #cbd5e1; font-size: 14px;">
-              <strong>Mobile:</strong> <a href="tel:+201068798889" style="color: #22d3ee; text-decoration: none; font-weight: 500;">+201068798889</a>
-            </p>
+
             <div style="display: flex; gap: 10px; align-items: center;">
               <a href="https://www.linkedin.com/in/ahmedhussein90/" target="_blank" rel="noopener noreferrer" style="display: block; text-decoration: none;">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" title="LinkedIn Profile" class="social-icon">
@@ -134,238 +137,238 @@ const data = {
     base: 'm',
     refs: {'1': 'BS 350:2004 Table 3', '2': 'BS 350:2004 Section 3'},
     units: {
-      'metre': {val: 1, std: '2', exact: true},
-      'centimetre': {val: 0.01, std: '2', exact: true},
-      'millimetre': {val: 0.001, std: '2', exact: true},
-      'micrometer': {val: 1e-6, std: '2', exact: true},
-      'kilometre': {val: 1e3, std: '2', exact: true},
-      'inch': {val: 0.0254, std: '1', exact: true},
-      'foot': {val: 0.3048, std: '1', exact: true},
-      'yard': {val: 0.9144, std: '1', exact: true},
-      'mile': {val: 1609.344, std: '1', exact: true}
+      'metre': {val: 1, std: '2', exact: true, symbol: 'm'},
+      'centimetre': {val: 0.01, std: '2', exact: true, symbol: 'cm'},
+      'millimetre': {val: 0.001, std: '2', exact: true, symbol: 'mm'},
+      'micrometer': {val: 1e-6, std: '2', exact: true, symbol: 'μm'},
+      'kilometre': {val: 1e3, std: '2', exact: true, symbol: 'km'},
+      'inch': {val: 0.0254, std: '1', exact: true, symbol: 'in'},
+      'foot': {val: 0.3048, std: '1', exact: true, symbol: 'ft'},
+      'yard': {val: 0.9144, std: '1', exact: true, symbol: 'yd'},
+      'mile': {val: 1609.344, std: '1', exact: true, symbol: 'mi'}
     }
   },
   'Area': {
     base: 'm²',
     refs: {'1': 'BS 350:2004 Table 4', '2': 'BS 350:2004 Section 4'},
     units: {
-      'square metre': {val: 1, std: '2', exact: true},
-      'square millimetre': {val: 1e-6, std: '2', exact: true},
-      'square centimetre': {val: 0.0001, std: '2', exact: true},
-      'square kilometre': {val: 1e6, std: '2', exact: true},
-      'square inch': {val: 6.4516e-4, std: '1', exact: true},
-      'square foot': {val: 9.290304e-2, std: '1', exact: true},
-      'square yard': {val: 0.83612736, std: '1', exact: true},
-      'square mile': {val: 2.589988e6, std: '1', exact: false}
+      'square metre': {val: 1, std: '2', exact: true, symbol: 'm²'},
+      'square millimetre': {val: 1e-6, std: '2', exact: true, symbol: 'mm²'},
+      'square centimetre': {val: 0.0001, std: '2', exact: true, symbol: 'cm²'},
+      'square kilometre': {val: 1e6, std: '2', exact: true, symbol: 'km²'},
+      'square inch': {val: 6.4516e-4, std: '1', exact: true, symbol: 'in²'},
+      'square foot': {val: 9.290304e-2, std: '1', exact: true, symbol: 'ft²'},
+      'square yard': {val: 0.83612736, std: '1', exact: true, symbol: 'yd²'},
+      'square mile': {val: 2.589988e6, std: '1', exact: false, symbol: 'mi²'}
     }
   },
   'Volume': {
     base: 'm³',
     refs: {'1': 'BS 350:2004 Table 6', '2': 'BS 350:2004 Section 5', '3': 'API MPMS Ch12.2.1'},
     units: {
-      'cubic metre': {val: 1, std: '2', exact: true},
-      'cubic centimetre': {val: 1e-6, std: '2', exact: true},
-      'cubic millimetre': {val: 1e-9, std: '2', exact: true},
-      'kilo cubic metre': {val: 1000, std: '2', exact: true},
-      'mega cubic metre': {val: 1e6, std: '2', exact: true},
-      'litre': {val: 0.001, std: '1', exact: true},
-      'cubic inch': {val: 16.387064e-6, std: '1', exact: true},
-      'cubic foot': {val: 0.028316846592, std: '1', exact: true},
-      'kilo cubic foot': {val: 28.316846592, std: '2', exact: true},
-      'thousand cubic foot': {val: 28.316846592, std: '2', exact: true},
-      'million cubic foot': {val: 28316.846592, std: '2', exact: true},
-      'barrel (for petroleum, 42 gallons (U.S.))': {val: 0.158987294928, std: '2,3', exact: true},
-      'gallon (U.K.)': {val: 4.54609e-3, std: '2', exact: true},
-      'gallon (U.S)': {val: 3.785411784e-3, std: '2,3', exact: true}
+      'cubic metre': {val: 1, std: '2', exact: true, symbol: 'm³'},
+      'cubic centimetre': {val: 1e-6, std: '2', exact: true, symbol: 'cm³'},
+      'cubic millimetre': {val: 1e-9, std: '2', exact: true, symbol: 'mm³'},
+      'kilo cubic metre': {val: 1000, std: '2', exact: true, symbol: 'km³'},
+      'mega cubic metre': {val: 1e6, std: '2', exact: true, symbol: 'Mm³'},
+      'litre': {val: 0.001, std: '1', exact: true, symbol: 'L'},
+      'cubic inch': {val: 16.387064e-6, std: '1', exact: true, symbol: 'in³'},
+      'cubic foot': {val: 0.028316846592, std: '1', exact: true, symbol: 'ft³'},
+      'kilo cubic foot': {val: 28.316846592, std: '2', exact: true, symbol: 'kft³'},
+      'thousand cubic foot': {val: 28.316846592, std: '2', exact: true, symbol: 'Mft³'},
+      'million cubic foot': {val: 28316.846592, std: '2', exact: true, symbol: 'MMft³'},
+      'barrel (for petroleum, 42 gallons (U.S.))': {val: 0.158987294928, std: '2,3', exact: true, symbol: 'bbl'},
+      'gallon (U.K.)': {val: 4.54609e-3, std: '2', exact: true, symbol: 'gal'},
+      'gallon (U.S)': {val: 3.785411784e-3, std: '2,3', exact: true, symbol: 'gal'}
     }
   },
   'Mass': {
     base: 'kg',
     refs: {'1': 'BS 350:2004 Table 15', '2': 'BS 350:2004 Section 15'},
     units: {
-      'kilogram': {val: 1, std: '2', exact: true},
-      'gram': {val: 1e-3, std: '2', exact: true},
-      'milligram': {val: 1e-6, std: '2', exact: true},
-      'microgram': {val: 1e-9, std: '2', exact: true},
-      'pound (avoirdupois)': {val: 0.45359237, std: '1', exact: true},
-      'thousand pound (avoirdupois)': {val: 453.59237, std: '2', exact: true},
-      'million pound (avoirdupois)': {val: 4.5359237e5, std: '2', exact: true},
-      'tonne (metric)': {val: 1000, std: '2', exact: true},
-      'ton (short)': {val: 907.18474, std: '2', exact: true},
-      'ton (long)': {val: 1016.0469088, std: '2', exact: true}
+      'kilogram': {val: 1, std: '2', exact: true, symbol: 'kg'},
+      'gram': {val: 1e-3, std: '2', exact: true, symbol: 'g'},
+      'milligram': {val: 1e-6, std: '2', exact: true, symbol: 'mg'},
+      'microgram': {val: 1e-9, std: '2', exact: true, symbol: 'μg'},
+      'pound (avoirdupois)': {val: 0.45359237, std: '1', exact: true, symbol: 'lb'},
+      'thousand pound (avoirdupois)': {val: 453.59237, std: '2', exact: true, symbol: 'klb'},
+      'million pound (avoirdupois)': {val: 4.5359237e5, std: '2', exact: true, symbol: 'Mlb'},
+      'tonne (metric)': {val: 1000, std: '2', exact: true, symbol: 'tonne'},
+      'ton (short)': {val: 907.18474, std: '2', exact: true, symbol: 'short ton'},
+      'ton (long)': {val: 1016.0469088, std: '2', exact: true, symbol: 'long ton'}
     }
   },
   'Time': {
     base: 's',
     refs: {'1': 'BS 350:2004 Section 10'},
     units: {
-      'second': {val: 1, std: '1', exact: true},
-      'millisecond': {val: 0.001, std: '1', exact: true},
-      'microsecond': {val: 1e-6, std: '1', exact: true},
-      'nanosecond': {val: 1e-9, std: '1', exact: true},
-      'minute': {val: 60, std: '1', exact: true},
-      'hour': {val: 3600, std: '1', exact: true},
-      'day': {val: 86400, std: '1', exact: true}
+      'second': {val: 1, std: '1', exact: true, symbol: 's'},
+      'millisecond': {val: 0.001, std: '1', exact: true, symbol: 'ms'},
+      'microsecond': {val: 1e-6, std: '1', exact: true, symbol: 'μs'},
+      'nanosecond': {val: 1e-9, std: '1', exact: true, symbol: 'ns'},
+      'minute': {val: 60, std: '1', exact: true, symbol: 'min'},
+      'hour': {val: 3600, std: '1', exact: true, symbol: 'hr'},
+      'day': {val: 86400, std: '1', exact: true, symbol: 'd'}
     }
   },
   'Pressure': {
     base: 'Pa',
     refs: {'1': 'BS 350:2004 Section 33', '2': 'BS 350:2004 Table 32', '3': 'BS 350:2004 Table 33', '4': 'BS 350:2004 Table 34'},
     units: {
-      'pascal': {val: 1, std: '1', exact: true},
-      'kilo pascal': {val: 1000, std: '1', exact: true},
-      'mega pascal': {val: 1e6, std: '1', exact: true},
-      'giga pascal': {val: 1e9, std: '1', exact: true},
-      'kilogram-force per square metre': {val: 9.80665, std: '4', exact: true},
-      'kilogram-force per square centimetre': {val: 98066.5, std: '2', exact: true},
-      'pound-force per square foot': {val: 47.88025898, std: '3', exact: false},
-      'pound-force per square inch': {val: 6894.757293168361, std: '1', exact: false},
-      'psi': {val: 6894.757293168361, std: '1', exact: false},
-      'bar': {val: 1e5, std: '3', exact: true},
-      'millibar': {val: 100, std: '3', exact: true},
-      'millimetre of mercury, conventional': {val: 133.3224, std: '4', exact: false},
-      'millimetre of water, conventional': {val: 9.80665, std: '1', exact: true},
-      'millimetre of water @ 60°F': {val: 248.84/25.4, std: '1', exact: true, frac: '248.84/25.4'},
-      'inch of mercury, conventional': {val: 3386.389, std: '4', exact: false},
-      'inch of mercury @ 32°F': {val: 3386.38, std: '1', exact: false},
-      'inch of mercury @ 60°F': {val: 3376.85, std: '1', exact: false},
-      'inch of water, conventional': {val: 249.08891, std: '4', exact: true},
-      'inch of water @ 39.2°F': {val: 249.082, std: '1', exact: false},
-      'inch of water @ 60°F': {val: 248.84, std: '1', exact: true},
-      'foot of water, conventional': {val: 2989.06692, std: '4', exact: true},
-      'foot of water @ 39.2°F': {val: 2988.98, std: '1', exact: false},
-      'torr': {val: 101325/760, std: '1', exact: true, frac: '101325/760'},
-      'atmosphere, standard': {val: 101325, std: '3', exact: true}
+      'pascal': {val: 1, std: '1', exact: true, symbol: 'Pa'},
+      'kilo pascal': {val: 1000, std: '1', exact: true, symbol: 'kPa'},
+      'mega pascal': {val: 1e6, std: '1', exact: true, symbol: 'MPa'},
+      'giga pascal': {val: 1e9, std: '1', exact: true, symbol: 'GPa'},
+      'kilogram-force per square metre': {val: 9.80665, std: '4', exact: true, symbol: 'kgf/m²'},
+      'kilogram-force per square centimetre': {val: 98066.5, std: '2', exact: true, symbol: 'kgf/cm²'},
+      'pound-force per square foot': {val: 47.88025898, std: '3', exact: false, symbol: 'lbf/ft²'},
+      'pound-force per square inch': {val: 6894.757293168361, std: '1', exact: false, symbol: 'lbf/in²'},
+      'psi': {val: 6894.757293168361, std: '1', exact: false, symbol: 'psi'},
+      'bar': {val: 1e5, std: '3', exact: true, symbol: 'bar'},
+      'millibar': {val: 100, std: '3', exact: true, symbol: 'mbar'},
+      'millimetre of mercury, conventional': {val: 133.3224, std: '4', exact: false, symbol: 'mmHg'},
+      'millimetre of water, conventional': {val: 9.80665, std: '1', exact: true, symbol: 'mmH₂O'},
+      'millimetre of water @ 60°F': {val: 248.84/25.4, std: '1', exact: true, frac: '248.84/25.4', symbol: 'mmH₂O'},
+      'inch of mercury, conventional': {val: 3386.389, std: '4', exact: false, symbol: 'inHg'},
+      'inch of mercury @ 32°F': {val: 3386.38, std: '1', exact: false, symbol: 'inHg'},
+      'inch of mercury @ 60°F': {val: 3376.85, std: '1', exact: false, symbol: 'inHg'},
+      'inch of water, conventional': {val: 249.08891, std: '4', exact: true, symbol: 'inH₂O'},
+      'inch of water @ 39.2°F': {val: 249.082, std: '1', exact: false, symbol: 'inH₂O'},
+      'inch of water @ 60°F': {val: 248.84, std: '1', exact: true, symbol: 'inH₂O'},
+      'foot of water, conventional': {val: 2989.06692, std: '4', exact: true, symbol: 'ftH₂O'},
+      'foot of water @ 39.2°F': {val: 2988.98, std: '1', exact: false, symbol: 'ftH₂O'},
+      'torr': {val: 101325/760, std: '1', exact: true, frac: '101325/760', symbol: 'Torr'},
+      'atmosphere, standard': {val: 101325, std: '3', exact: true, symbol: 'atm'}
     }
   },
   'Volume Flow Rate': {
     base: 'm³/s',
     refs: {'1': 'BS 350:2004 Section 5', '2': 'BS 350:2004 Section 10', '3': 'BS 350:2004 Section 5 & BS 350:2004 Section 10'},
     units: {
-      'cubic metre per second': {val: 1, std: '1', exact: true},
-      'cubic metre per hour': {val: 1/3600, std: '2', exact: true, frac: '1/3600'},
-      'cubic metre per day': {val: 1/86400, std: '2', exact: true, frac: '1/86400'},
-      'kilo cubic metre per second': {val: 1000, std: '1', exact: true},
-      'kilo cubic metre per hour': {val: 1/3.6, std: '3', exact: true, frac: '1/3.6'},
-      'kilo cubic metre per day': {val: 1/86.4, std: '3', exact: true, frac: '1/86.4'},
-      'mega cubic metre per hour': {val: 1e6/3600, std: '3', exact: true, frac: '10⁶/3600'},
-      'mega cubic metre per day': {val: 1e6/86400, std: '3', exact: true, frac: '10⁶/86400'},
-      'cubic feet per hour': {val: 0.028316846592/3600, std: '3', exact: true, frac: '0.028316846592/3600'},
-      'cubic feet per day': {val: 0.028316846592/86400, std: '3', exact: true, frac: '0.028316846592/86400'},
-      'kilo cubic feet per hour': {val: 28.316846592/3600, std: '3', exact: true, frac: '28.316846592/3600'},
-      'kilo cubic feet per day': {val: 28.316846592/86400, std: '3', exact: true, frac: '28.316846592/86400'},
-      'thousand cubic feet per hour': {val: 28.316846592/3600, std: '3', exact: true, frac: '28.316846592/3600'},
-      'thousand cubic feet per day': {val: 28.316846592/86400, std: '3', exact: true, frac: '28.316846592/86400'},
-      'million cubic feet per hour': {val: 28316.846592/3600, std: '3', exact: true, frac: '28316.846592/3600'},
-      'million cubic feet per day': {val: 28316.846592/86400, std: '3', exact: true, frac: '28316.846592/86400'},
-      'barrels per second': {val: 0.158987294928, std: '1', exact: true},
-      'barrels per minute': {val: 0.158987294928/60, std: '3', exact: true, frac: '0.158987294928/60'},
-      'barrels per hour': {val: 0.158987294928/3600, std: '3', exact: true, frac: '0.158987294928/3600'},
-      'barrels per day': {val: 0.158987294928/86400, std: '3', exact: true, frac: '0.158987294928/86400'}
+      'cubic metre per second': {val: 1, std: '1', exact: true, symbol: 'm³/s'},
+      'cubic metre per hour': {val: 1/3600, std: '2', exact: true, frac: '1/3600', symbol: 'm³/hr'},
+      'cubic metre per day': {val: 1/86400, std: '2', exact: true, frac: '1/86400', symbol: 'm³/d'},
+      'kilo cubic metre per second': {val: 1000, std: '1', exact: true, symbol: 'km³/s'},
+      'kilo cubic metre per hour': {val: 1/3.6, std: '3', exact: true, frac: '1/3.6', symbol: 'km³/hr'},
+      'kilo cubic metre per day': {val: 1/86.4, std: '3', exact: true, frac: '1/86.4', symbol: 'km³/d'},
+      'mega cubic metre per hour': {val: 1e6/3600, std: '3', exact: true, frac: '10⁶/3600', symbol: 'Mm³/hr'},
+      'mega cubic metre per day': {val: 1e6/86400, std: '3', exact: true, frac: '10⁶/86400', symbol: 'Mm³/d'},
+      'cubic feet per hour': {val: 0.028316846592/3600, std: '3', exact: true, frac: '0.028316846592/3600', symbol: 'ft³/hr'},
+      'cubic feet per day': {val: 0.028316846592/86400, std: '3', exact: true, frac: '0.028316846592/86400', symbol: 'ft³/d'},
+      'kilo cubic feet per hour': {val: 28.316846592/3600, std: '3', exact: true, frac: '28.316846592/3600', symbol: 'kft³/hr'},
+      'kilo cubic feet per day': {val: 28.316846592/86400, std: '3', exact: true, frac: '28.316846592/86400', symbol: 'kft³/d'},
+      'thousand cubic feet per hour': {val: 28.316846592/3600, std: '3', exact: true, frac: '28.316846592/3600', symbol: 'Mft³/hr'},
+      'thousand cubic feet per day': {val: 28.316846592/86400, std: '3', exact: true, frac: '28.316846592/86400', symbol: 'Mft³/d'},
+      'million cubic feet per hour': {val: 28316.846592/3600, std: '3', exact: true, frac: '28316.846592/3600', symbol: 'MMft³/hr'},
+      'million cubic feet per day': {val: 28316.846592/86400, std: '3', exact: true, frac: '28316.846592/86400', symbol: 'MMft³/d'},
+      'barrels per second': {val: 0.158987294928, std: '1', exact: true, symbol: 'bbl/s'},
+      'barrels per minute': {val: 0.158987294928/60, std: '3', exact: true, frac: '0.158987294928/60', symbol: 'bbl/m'},
+      'barrels per hour': {val: 0.158987294928/3600, std: '3', exact: true, frac: '0.158987294928/3600', symbol: 'bbl/hr'},
+      'barrels per day': {val: 0.158987294928/86400, std: '3', exact: true, frac: '0.158987294928/86400', symbol: 'bbl/d'}
     }
   },
   'Mass Flow Rate': {
     base: 'kg/s',
     refs: {'1': 'BS 350:2004 Section 15', '2': 'BS 350:2004 Section 10', '3': 'BS 350:2004 Section 15 & Section 10'},
     units: {
-      'kilogram per second': {val: 1, std: '1', exact: true},
-      'pound (avoirdupois) per hour': {val: 0.45359237/3600, std: '3', exact: true, frac: '(0.45359237/3600)'},
-      'pound per second': {val: 0.45359237, std: '1', exact: true},
-      'kilogram per hour': {val: 1/3600, std: '2', exact: true, frac: '(1.0/3600)'},
-      'tonne per second': {val: 1000, std: '1', exact: true},
-      'tonne per hour': {val: 1/3.6, std: '3', exact: true, frac: '(1.0/3.6)'},
-      'ton (short) per second': {val: 907.18474, std: '1', exact: true},
-      'ton (short) per hour': {val: 907.18474/3600, std: '3', exact: true, frac: '(907.18474/3600)'},
-      'kilogram per day': {val: 1/86400, std: '2', exact: true, frac: '(1.0/86400)'},
-      'tonne per day': {val: 1/86.4, std: '3', exact: true, frac: '(1.0/86.4)'},
-      'ton (short) per day': {val: 907.18474/86400, std: '3', exact: true, frac: '(907.18474/86400)'},
-      'kilo pound per second': {val: 453.59237, std: '3', exact: true},
-      'kilo pound per hour': {val: 453.59237/3600, std: '3', exact: true, frac: '(453.59237/3600)'},
-      'kilo pound per day': {val: 453.59237/86400, std: '3', exact: true, frac: '(453.59237/86400)'},
-      'ton (long) per second': {val: 1016.0469088, std: '1', exact: true},
-      'ton (long) per hour': {val: 1016.0469088/3600, std: '1', exact: true, frac: '(1016.0469088/3600)'},
-      'ton (long) per day': {val: 1016.0469088/86400, std: '1', exact: true, frac: '(1016.0469088/86400)'}
+      'kilogram per second': {val: 1, std: '1', exact: true, symbol: 'kg/s'},
+      'pound (avoirdupois) per hour': {val: 0.45359237/3600, std: '3', exact: true, frac: '(0.45359237/3600)', symbol: 'lb/hr'},
+      'pound per second': {val: 0.45359237, std: '1', exact: true, symbol: 'lb/s'},
+      'kilogram per hour': {val: 1/3600, std: '2', exact: true, frac: '(1.0/3600)', symbol: 'kg/hr'},
+      'tonne per second': {val: 1000, std: '1', exact: true, symbol: 'tonne/s'},
+      'tonne per hour': {val: 1/3.6, std: '3', exact: true, frac: '(1.0/3.6)', symbol: 'tonne/hr'},
+      'ton (short) per second': {val: 907.18474, std: '1', exact: true, symbol: 'short ton/s'},
+      'ton (short) per hour': {val: 907.18474/3600, std: '3', exact: true, frac: '(907.18474/3600)', symbol: 'short ton/hr'},
+      'kilogram per day': {val: 1/86400, std: '2', exact: true, frac: '(1.0/86400)', symbol: 'kg/day'},
+      'tonne per day': {val: 1/86.4, std: '3', exact: true, frac: '(1.0/86.4)', symbol: 'tonne/day'},
+      'ton (short) per day': {val: 907.18474/86400, std: '3', exact: true, frac: '(907.18474/86400)', symbol: 'short ton/day'},
+      'kilo pound per second': {val: 453.59237, std: '3', exact: true, symbol: 'klb/s'},
+      'kilo pound per hour': {val: 453.59237/3600, std: '3', exact: true, frac: '(453.59237/3600)', symbol: 'klb/hr'},
+      'kilo pound per day': {val: 453.59237/86400, std: '3', exact: true, frac: '(453.59237/86400)', symbol: 'klb/day'},
+      'ton (long) per second': {val: 1016.0469088, std: '1', exact: true, symbol: 'long ton/s'},
+      'ton (long) per hour': {val: 1016.0469088/3600, std: '1', exact: true, frac: '(1016.0469088/3600)', symbol: 'long ton/hr'},
+      'ton (long) per day': {val: 1016.0469088/86400, std: '1', exact: true, frac: '(1016.0469088/86400)', symbol: 'long ton/day'}
     }
   },
   'Energy Flow Rate': {
     base: 'J/s',
     refs: {'1': 'BS 350:2004 Section 37 & BS 350:2004 Section 10', '2': 'BS 350:2004 Section 37', '3': 'BS 350:2004 Table 38 & BS 350:2004 Section 10'},
     units: {
-      'joules per second': {val: 1, std: '2', exact: true},
-      'kilojoules per second': {val: 1000, std: '2', exact: true},
-      'megajoules per second': {val: 1e6, std: '2', exact: true},
-      'gigajoules per second': {val: 1e9, std: '2', exact: true},
-      'megajoules per hour': {val: 1e6/3600, std: '1', exact: true, frac: '(1.0/3600) x 10⁶'},
-      'gigajoules per hour': {val: 1e9/3600, std: '1', exact: true, frac: '(1.0/3600) x 10⁹'},
-      'terajoule per hour': {val: 1e12/3600, std: '1', exact: true, frac: '(1.0/3600) x 10¹²'},
-      'megajoule per day': {val: 1e6/86400, std: '1', exact: true, frac: '(1.0/86400) x 10⁶'},
-      'gigajoule per day': {val: 1e9/86400, std: '1', exact: true, frac: '(1.0/86400) x 10⁹'},
-      'terajoule per day': {val: 1e12/86400, std: '1', exact: true, frac: '(1.0/86400) x 10¹²'},
-      'British thermal units per second': {val: 1.05505585262e3, std: '3', exact: false, frac: '1.05505585262 x 10³'},
-      'British thermal units per hour': {val: 0.293071, std: '3', exact: false},
-      'British thermal units per day': {val: 1.221129e-2, std: '3', exact: false, frac: '1.221129 x 10⁻²'},
-      'kilo British thermal units per hour': {val: 293.071, std: '3', exact: false},
-      'kilo British thermal units per day': {val: 12.221129, std: '3', exact: false},
-      'million British thermal units per hour': {val: 2.93071e5, std: '3', exact: false, frac: '2.93071 x 10⁵'},
-      'million British thermal units per day': {val: 1.221129e4, std: '3', exact: false, frac: '1.221129 x 10⁴'},
-      'million British thermal units per second': {val: 1.05505585262e9, std: '3', exact: false, frac: '1.05505585262 x 10⁹'}
+      'joules per second': {val: 1, std: '2', exact: true, symbol: 'J/s'},
+      'kilojoules per second': {val: 1000, std: '2', exact: true, symbol: 'kJ/s'},
+      'megajoules per second': {val: 1e6, std: '2', exact: true, symbol: 'MJ/s'},
+      'gigajoules per second': {val: 1e9, std: '2', exact: true, symbol: 'GJ/s'},
+      'megajoules per hour': {val: 1e6/3600, std: '1', exact: true, frac: '(1.0/3600) x 10⁶', symbol: 'MJ/hr'},
+      'gigajoules per hour': {val: 1e9/3600, std: '1', exact: true, frac: '(1.0/3600) x 10⁹', symbol: 'GJ/hr'},
+      'terajoule per hour': {val: 1e12/3600, std: '1', exact: true, frac: '(1.0/3600) x 10¹²', symbol: 'TJ/hr'},
+      'megajoule per day': {val: 1e6/86400, std: '1', exact: true, frac: '(1.0/86400) x 10⁶', symbol: 'MJ/d'},
+      'gigajoule per day': {val: 1e9/86400, std: '1', exact: true, frac: '(1.0/86400) x 10⁹', symbol: 'GJ/d'},
+      'terajoule per day': {val: 1e12/86400, std: '1', exact: true, frac: '(1.0/86400) x 10¹²', symbol: 'TJ/d'},
+      'British thermal units per second': {val: 1.05505585262e3, std: '3', exact: false, frac: '1.05505585262 x 10³', symbol: 'Btur/s'},
+      'British thermal units per hour': {val: 0.293071, std: '3', exact: false, symbol: 'Btur/hr'},
+      'British thermal units per day': {val: 1.221129e-2, std: '3', exact: false, frac: '1.221129 x 10⁻²', symbol: 'Btur/d'},
+      'kilo British thermal units per hour': {val: 293.071, std: '3', exact: false, symbol: 'kBtur/hr'},
+      'kilo British thermal units per day': {val: 12.221129, std: '3', exact: false, symbol: 'kBtur/d'},
+      'million British thermal units per hour': {val: 2.93071e5, std: '3', exact: false, frac: '2.93071 x 10⁵', symbol: 'MMBtur/hr'},
+      'million British thermal units per day': {val: 1.221129e4, std: '3', exact: false, frac: '1.221129 x 10⁴', symbol: 'MMBtur/d'},
+      'million British thermal units per second': {val: 1.05505585262e9, std: '3', exact: false, frac: '1.05505585262 x 10⁹', symbol: 'MMBtur/s'}
     }
   },
   'Kinematic Viscosity': {
     base: 'm²/s',
     refs: {'1': 'BS 350:2004 Section 36'},
     units: {
-      'metre squared per second': {val: 1, std: '1', exact: true},
-      'millimetre squared per second': {val: 1e-6, std: '1', exact: true},
-      'centistokes': {val: 1e-6, std: '1', exact: true}
+      'metre squared per second': {val: 1, std: '1', exact: true, symbol: 'm²/s'},
+      'millimetre squared per second': {val: 1e-6, std: '1', exact: true, symbol: 'mm²/s'},
+      'centistokes': {val: 1e-6, std: '1', exact: true, symbol: 'cSt'}
     }
   },
   'Dynamic Viscosity': {
     base: 'Pa·s',
     refs: {'1': 'BS 350:2004 Table 35', '2': 'BS 350:2004 Section 35'},
     units: {
-      'pascal second': {val: 1, std: '2', exact: true},
-      'centipoise': {val: 0.001, std: '1', exact: true},
-      'kilogram force second per square metre': {val: 9.80665, std: '1', exact: true},
-      'pound-force hour per square foot': {val: 1.72369e5, std: '2', exact: false},
-      'pound-force second per square foot': {val: 47.8803, std: '2', exact: false},
-      'poundal second per square foot': {val: 1.48816394356955, std: '', exact: true},
-      'pound per foot second': {val: 1.48816394356955, std: '', exact: true},
-      'Poise': {val: 0.1, std: '2', exact: true},
-      'reciprocal pascal second': {val: 10, std: '', exact: true}
+      'pascal second': {val: 1, std: '2', exact: true, symbol: 'Pa·s'},
+      'centipoise': {val: 0.001, std: '1', exact: true, symbol: 'cP'},
+      'kilogram force second per square metre': {val: 9.80665, std: '1', exact: true, symbol: 'kgf·s/m²'},
+      'pound-force hour per square foot': {val: 1.72369e5, std: '2', exact: false, symbol: 'lbf·hr/ft²'},
+      'pound-force second per square foot': {val: 47.8803, std: '2', exact: false, symbol: 'lbf·s/ft²'},
+      'poundal second per square foot': {val: 1.48816394356955, std: '', exact: true, symbol: 'pdl·s/ft²'},
+      'pound per foot second': {val: 1.48816394356955, std: '', exact: true, symbol: 'lb/(ft·s)'},
+      'Poise': {val: 0.1, std: '2', exact: true, symbol: 'poise'},
+      'reciprocal pascal second': {val: 10, std: '', exact: true, symbol: 'rhe'}
     }
   },
   'Density': {
     base: 'kg/m³',
     refs: {'1': 'BS 350:2004 Table 22', '2': 'BS 350:2004 Section 15', '3': 'BS 350:2004 Table 17', '4': 'BS 350:2004 Section 3'},
     units: {
-      'kilogram per cubic metre': {val: 1, std: '2', exact: true},
-      'gram per cubic centimetre': {val: 1000, std: '1', exact: true},
-      'milligram per cubic metre': {val: 1e-6, std: '2', exact: true},
-      'tonne per cubic metre': {val: 1000, std: '3', exact: true},
-      'pound per cubic foot': {val: 16.0184633739601, std: '2,4', exact: false},
-      'pound per cubic inch': {val: 2.76799047102031e4, std: '2,4', exact: false}
+      'kilogram per cubic metre': {val: 1, std: '2', exact: true, symbol: 'kg/m³'},
+      'gram per cubic centimetre': {val: 1000, std: '1', exact: true, symbol: 'g/cm³'},
+      'milligram per cubic metre': {val: 1e-6, std: '2', exact: true, symbol: 'mg/m³'},
+      'tonne per cubic metre': {val: 1000, std: '3', exact: true, symbol: 'tonne/m³'},
+      'pound per cubic foot': {val: 16.0184633739601, std: '2,4', exact: false, symbol: 'lb/ft³'},
+      'pound per cubic inch': {val: 2.76799047102031e4, std: '2,4', exact: false, symbol: 'lb/in³'}
     }
   },
   'Energy': {
     base: 'J',
     refs: {'1': 'BS 350:2004 Table 37', '2': 'BS 350:2004 Table 38', '3': 'BS 350:2004 Section 37'},
     units: {
-      'joules': {val: 1, std: '3', exact: true},
-      'kilojoules': {val: 1000, std: '3', exact: true},
-      'megajoules': {val: 1e6, std: '3', exact: true},
-      'gigajoules': {val: 1e9, std: '3', exact: true},
-      'terajoules': {val: 1e12, std: '3', exact: true},
-      'watt hour': {val: 3600, std: '1', exact: true},
-      'kilowatt hour': {val: 3600000, std: '3', exact: true},
-      'watt second': {val: 1, std: '1', exact: true},
-      'British thermal unit': {val: 1.055056e3, std: '2', exact: false},
-      'kilo British thermal unit': {val: 1.055056e6, std: '3', exact: false},
-      'million British thermal unit': {val: 1.055056e9, std: '3', exact: false},
-      'decatherm': {val: 1.055056e9, std: '3', exact: false},
-      'calorie': {val: 4.1868, std: '2', exact: true},
-      'kilocalorie': {val: 4186.8, std: '3', exact: true},
-      'million kilocalorie': {val: 4186800000, std: '3', exact: true}
+      'joules': {val: 1, std: '3', exact: true, symbol: 'J'},
+      'kilojoules': {val: 1000, std: '3', exact: true, symbol: 'kJ'},
+      'megajoules': {val: 1e6, std: '3', exact: true, symbol: 'MJ'},
+      'gigajoules': {val: 1e9, std: '3', exact: true, symbol: 'GJ'},
+      'terajoules': {val: 1e12, std: '3', exact: true, symbol: 'TJ'},
+      'watt hour': {val: 3600, std: '1', exact: true, symbol: 'W·hr'},
+      'kilowatt hour': {val: 3600000, std: '3', exact: true, symbol: 'kW·hr'},
+      'watt second': {val: 1, std: '1', exact: true, symbol: 'W·s'},
+      'British thermal unit': {val: 1.055056e3, std: '2', exact: false, symbol: 'Btur'},
+      'kilo British thermal unit': {val: 1.055056e6, std: '3', exact: false, symbol: 'kBtur'},
+      'million British thermal unit': {val: 1.055056e9, std: '3', exact: false, symbol: 'MMBtur'},
+      'decatherm': {val: 1.055056e9, std: '3', exact: false, symbol: 'decatherm'},
+      'calorie': {val: 4.1868, std: '2', exact: true, symbol: 'cal'},
+      'kilocalorie': {val: 4186.8, std: '3', exact: true, symbol: 'kcal'},
+      'million kilocalorie': {val: 4186800000, std: '3', exact: true, symbol: 'Mcal'}
     }
   },
   'Temperature': {
@@ -381,6 +384,7 @@ const data = {
     units: ['K','Δ°C','Δ°F','R']
   }
 };
+
 
 
 const catEl = document.getElementById('category');
@@ -442,13 +446,15 @@ function loadCategory(name){
   } else {
     const units = cfg.units;
     Object.keys(units).forEach(u => {
-      fromEl.add(new Option(u, u));
-      toEl.add(new Option(u, u));
       const unitData = units[u];
+      const displayName = unitData.symbol ? `${u} (${unitData.symbol})` : u;
+      fromEl.add(new Option(displayName, u));
+      toEl.add(new Option(displayName, u));
       const displayVal = unitData.frac ? unitData.frac : full(unitData.val);
       const valDisplay = unitData.exact ? `<strong>${displayVal}</strong>` : displayVal;
       const row = document.createElement('tr');
-      row.innerHTML = `<td>${u}</td><td>${valDisplay}</td><td>${unitData.std}</td>`;
+      const tableUnit = unitData.symbol ? `${u}<br><small>${unitData.symbol}</small>` : u;
+      row.innerHTML = `<td>${tableUnit}</td><td>${valDisplay}</td><td>${unitData.std}</td>`;
       tableBody.appendChild(row);
     });
   }
